@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Yusra Issam · Graduation 2026</title>
+<meta name="description" content="An invitation to celebrate Yusra Issam's graduation from The Hashemite University, Class of 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&family=Parisienne&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   TOKENS
+   ============================================================ */
+:root{
+  --paper:        #FBF4EF;
+  --paper-deep:   #F4E6DE;
+  --blush:        #F2CBD1;
+  --blush-soft:   #FAE3E5;
+  --rose:         #CE8D96;
+  --burgundy:     #6E2233;
+  --ink:          #2E2429;
+  --ink-soft:     #6B5A60;
+  --sage:         #A9B89C;
+  --gold:         #C9A227;
+
+  --card:         #FFFBF8;
+  --line:         rgba(110,34,51,.18);
+  --shadow-soft:  0 18px 40px -22px rgba(110,34,51,.38);
+  --shadow-lift:  0 28px 60px -26px rgba(110,34,51,.45);
+
+  --serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --sans:  "Jost", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --script:"Parisienne", "Snell Roundhand", cursive;
+
+  --gutter: clamp(20px, 5vw, 80px);
+  --measure: 62ch;
+
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:      #241A1E;
+    --paper-deep: #1B1316;
+    --blush:      #E2AEB6;
+    --blush-soft: #3A272C;
+    --rose:       #D99CA4;
+    --burgundy:   #F0C7CE;
+    --ink:        #F6E9E9;
+    --ink-soft:   #C5A9AF;
+    --sage:       #9FB094;
+    --card:       #2C2025;
+    --line:       rgba(240,199,206,.22);
+    --shadow-soft:0 18px 40px -22px rgba(0,0,0,.7);
+    --shadow-lift:0 28px 60px -26px rgba(0,0,0,.8);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#241A1E; --paper-deep:#1B1316; --blush:#E2AEB6; --blush-soft:#3A272C;
+  --rose:#D99CA4; --burgundy:#F0C7CE; --ink:#F6E9E9; --ink-soft:#C5A9AF;
+  --sage:#9FB094; --card:#2C2025; --line:rgba(240,199,206,.22);
+  --shadow-soft:0 18px 40px -22px rgba(0,0,0,.7);
+  --shadow-lift:0 28px 60px -26px rgba(0,0,0,.8);
+}
+
+*,*::before,*::after{box-sizing:inherit}
+html{-webkit-text-size-adjust:100%; scroll-padding-top: env(safe-area-inset-top,0px);}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-weight:300;
+  line-height:1.65;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%; display:block}
+button{font:inherit; color:inherit}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--rose); outline-offset:4px; border-radius:2px}
+
+/* paper grain, drawn locally as a data URI */
+body::before{
+  content:""; position:fixed; inset:-20px; z-index:0; pointer-events:none;
+  opacity:.45; mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='g'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/><feColorMatrix type='saturate' values='0'/></filter><rect width='200' height='200' filter='url(%23g)' opacity='.5'/></svg>");
+}
+@media (prefers-color-scheme: dark){ body::before{ mix-blend-mode:screen; opacity:.2 } }
+
+/* ============================================================
+   TYPE SCALE
+   ============================================================ */
+.display{
+  font-family:var(--serif); font-weight:300; line-height:.92;
+  letter-spacing:-.015em; margin:0;
+  font-size:clamp(3.4rem, 13vw, 10.5rem);
+}
+h2.title{
+  font-family:var(--serif); font-weight:300; margin:0;
+  font-size:clamp(2.1rem, 5.2vw, 4.1rem); line-height:1.02; letter-spacing:-.01em;
+}
+.script{ font-family:var(--script); color:var(--rose); font-size:clamp(1.5rem,3.4vw,2.4rem); line-height:1.3 }
+p{margin:0 0 1.1em; max-width:var(--measure)}
+.lede{font-size:clamp(1.02rem,1.6vw,1.2rem); color:var(--ink-soft)}
+.fine{font-size:.82rem; letter-spacing:.14em; color:var(--ink-soft)}
+
+/* ============================================================
+   CHROME: progress, cursor, music
+   ============================================================ */
+#progress{
+  position:fixed; left:0; right:0; top:env(safe-area-inset-top,0px); height:2px; z-index:90;
+  background:linear-gradient(90deg,var(--rose),var(--blush));
+  transform:scaleX(0); transform-origin:0 50%; will-change:transform;
+}
+#cursor,#cursor-dot{position:fixed; z-index:95; pointer-events:none; border-radius:50%; mix-blend-mode:multiply; display:none}
+#cursor{width:34px;height:34px;border:1px solid var(--rose); transition:width .25s,height .25s,opacity .25s; opacity:.7}
+#cursor-dot{width:6px;height:6px;background:var(--rose)}
+body.hovering #cursor{width:56px;height:56px;opacity:.35}
+@media (hover:hover) and (pointer:fine){
+  #cursor,#cursor-dot{display:block}
+}
+
+#music{
+  position:fixed; z-index:92;
+  right:clamp(14px,3vw,30px);
+  bottom:calc(clamp(14px,3vw,30px) + env(safe-area-inset-bottom,0px));
+  width:54px;height:54px;border-radius:50%;
+  border:1px solid var(--line); background:var(--card); color:var(--burgundy);
+  box-shadow:var(--shadow-soft); cursor:pointer;
+  display:grid; place-items:center; transition:transform .3s ease, box-shadow .3s ease;
+}
+#music:hover{transform:translateY(-3px) scale(1.04); box-shadow:var(--shadow-lift)}
+#music .bars{display:flex; gap:3px; align-items:flex-end; height:16px}
+#music .bars i{width:2.5px; background:currentColor; height:5px; border-radius:2px; transition:height .2s}
+#music.playing .bars i{animation:eq 1.1s ease-in-out infinite}
+#music.playing .bars i:nth-child(2){animation-delay:.18s}
+#music.playing .bars i:nth-child(3){animation-delay:.36s}
+#music.playing .bars i:nth-child(4){animation-delay:.1s}
+@keyframes eq{0%,100%{height:5px}50%{height:16px}}
+#music .label{
+  position:absolute; right:64px; white-space:nowrap; font-size:.7rem; letter-spacing:.18em;
+  color:var(--ink-soft); opacity:0; transition:opacity .3s; text-transform:none;
+}
+#music:hover .label{opacity:1}
+
+/* ============================================================
+   REVEALS
+   ============================================================ */
+.r{opacity:0; transform:translateY(26px); transition:opacity .9s cubic-bezier(.22,.7,.28,1), transform .9s cubic-bezier(.22,.7,.28,1)}
+.r.in{opacity:1; transform:none}
+.r-l{opacity:0; transform:translateX(-30px)}
+.r-l.in{opacity:1; transform:none; transition:opacity 1s ease, transform 1s cubic-bezier(.22,.7,.28,1)}
+.r-s{opacity:0; transform:scale(.94)}
+.r-s.in{opacity:1; transform:none; transition:opacity 1.1s ease, transform 1.1s cubic-bezier(.22,.7,.28,1)}
+
+@media (prefers-reduced-motion: reduce){
+  .r,.r-l,.r-s{opacity:1 !important; transform:none !important}
+  *{animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important}
+}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero{
+  position:relative; min-height:100svh; display:grid; place-items:center;
+  padding:calc(64px + env(safe-area-inset-top,0px)) var(--gutter) 120px;
+  overflow:hidden;
+  background:
+    radial-gradient(120% 80% at 18% 8%, var(--blush-soft) 0%, transparent 55%),
+    radial-gradient(90% 70% at 88% 92%, rgba(242,203,209,.45) 0%, transparent 60%),
+    var(--paper);
+}
+.hero-inner{position:relative; z-index:3; width:min(1180px,100%); text-align:center}
+.hero .eyebrow{
+  font-size:.74rem; letter-spacing:.42em; color:var(--rose); margin:0 0 clamp(18px,4vh,42px);
+  display:flex; align-items:center; justify-content:center; gap:14px;
+}
+.hero .eyebrow::before,.hero .eyebrow::after{content:""; height:1px; width:min(70px,12vw); background:var(--line)}
+.name{position:relative; display:inline-block}
+.name .display{color:var(--burgundy)}
+.name .display em{font-style:italic; font-weight:300; display:block; margin-top:-.1em}
+.hero-cap{
+  position:absolute; right:-14%; top:-38%; width:clamp(120px,20vw,250px);
+  animation:bob 7s ease-in-out infinite; transform-origin:50% 80%;
+}
+.hero-sub{
+  margin:clamp(22px,4vh,40px) auto 0; display:flex; flex-wrap:wrap; justify-content:center;
+  align-items:center; gap:clamp(10px,2vw,22px);
+  font-size:clamp(.72rem,1.5vw,.86rem); letter-spacing:.34em; color:var(--ink-soft);
+}
+.hero-sub span.dot{width:4px;height:4px;border-radius:50%;background:var(--blush)}
+.hero .script{margin-top:clamp(16px,3vh,28px); display:block}
+
+.scroll-cue{
+  position:absolute; left:50%; transform:translateX(-50%); z-index:4;
+  bottom:calc(26px + env(safe-area-inset-bottom,0px));
+  display:flex; flex-direction:column; align-items:center; gap:10px;
+  font-size:.66rem; letter-spacing:.32em; color:var(--ink-soft);
+}
+.scroll-cue .rail{width:1px; height:56px; background:linear-gradient(var(--line),transparent); position:relative; overflow:hidden}
+.scroll-cue .rail::after{content:""; position:absolute; left:0; width:1px; height:18px; background:var(--rose); animation:drip 2.4s ease-in-out infinite}
+@keyframes drip{0%{top:-20px}60%{top:56px}100%{top:56px}}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-6deg)}50%{transform:translateY(-16px) rotate(-1deg)}}
+
+/* floating confetti layer */
+.petals{position:absolute; inset:0; z-index:1; pointer-events:none; overflow:hidden}
+.petal{position:absolute; top:-8%; opacity:0; animation:fall linear infinite; will-change:transform}
+@keyframes fall{
+  0%{opacity:0; transform:translate3d(0,0,0) rotate(0deg)}
+  8%{opacity:.85}
+  100%{opacity:0; transform:translate3d(var(--dx,40px),112vh,0) rotate(var(--rot,320deg))}
+}
+
+/* ============================================================
+   SECTION SHELLS
+   ============================================================ */
+section{position:relative; z-index:2}
+.wrap{width:min(1180px,100%); margin-inline:auto; padding-inline:var(--gutter)}
+.band{padding-block:clamp(90px,14vh,170px)}
+.band--tint{background:linear-gradient(180deg, transparent, var(--paper-deep) 18%, var(--paper-deep) 82%, transparent)}
+
+/* torn paper divider */
+.torn{display:block; width:100%; height:clamp(28px,4vw,56px); fill:var(--paper-deep)}
+.torn.flip{transform:scaleY(-1)}
+
+/* ============================================================
+   STORY
+   ============================================================ */
+.story{display:grid; gap:clamp(36px,6vw,90px); grid-template-columns:1fr; align-items:center}
+@media(min-width:900px){ .story{grid-template-columns:1.05fr .95fr} }
+.story-lines p{font-family:var(--serif); font-size:clamp(1.6rem,3.4vw,2.7rem); line-height:1.3; color:var(--ink); margin:0 0 .35em; max-width:20ch}
+.story-lines p:last-of-type{color:var(--burgundy); font-style:italic}
+.id-card{
+  position:relative; background:var(--card); border:1px solid var(--line);
+  padding:clamp(28px,4vw,46px); box-shadow:var(--shadow-soft);
+  transform:rotate(-1.2deg);
+}
+.id-card::before{ /* tape */
+  content:""; position:absolute; top:-14px; left:50%; translate:-50% 0;
+  width:112px; height:28px; background:rgba(242,203,209,.75);
+  box-shadow:0 2px 6px rgba(110,34,51,.12);
+  clip-path:polygon(4% 12%,97% 0,100% 84%,2% 100%);
+}
+.id-row{display:flex; justify-content:space-between; gap:16px; padding:14px 0; border-bottom:1px dashed var(--line)}
+.id-row:last-child{border-bottom:0}
+.id-row dt{font-size:.7rem; letter-spacing:.24em; color:var(--rose); margin:0; padding-top:4px}
+.id-row dd{margin:0; text-align:right; font-family:var(--serif); font-size:clamp(1.1rem,2vw,1.5rem); line-height:1.3}
+
+/* ============================================================
+   COUNTDOWN
+   ============================================================ */
+.count-head{text-align:center; margin-bottom:clamp(34px,5vw,60px)}
+.counter{display:grid; grid-template-columns:repeat(4,1fr); gap:clamp(8px,1.6vw,22px); max-width:880px; margin-inline:auto}
+.unit{
+  position:relative; text-align:center; padding:clamp(18px,3vw,34px) 6px;
+  background:linear-gradient(180deg, rgba(255,255,255,.7), rgba(255,255,255,.25));
+  border:1px solid var(--line); backdrop-filter:blur(6px);
+  box-shadow:0 14px 34px -24px rgba(110,34,51,.5);
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .unit{background:linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.02))} }
+.unit .num{
+  font-family:var(--serif); font-size:clamp(2.1rem,7vw,4.4rem); line-height:1;
+  color:var(--burgundy); display:block; font-variant-numeric:tabular-nums;
+  transition:transform .35s cubic-bezier(.3,1.5,.5,1);
+}
+.unit.tick .num{transform:translateY(-4px) scale(1.03)}
+.unit .lab{font-size:.6rem; letter-spacing:.26em; color:var(--ink-soft); margin-top:10px; display:block}
+.unit::after{content:""; position:absolute; inset:6px; border:1px solid var(--line); opacity:.4; pointer-events:none}
+.today{text-align:center; font-family:var(--serif); font-size:clamp(2rem,6vw,3.6rem); color:var(--burgundy)}
+
+/* ============================================================
+   ENVELOPE
+   ============================================================ */
+.envelope-stage{display:grid; place-items:center; perspective:1400px; padding-block:clamp(20px,4vw,40px)}
+.envelope{
+  position:relative; width:min(620px,92vw); aspect-ratio:1.55/1; cursor:pointer;
+  transform-style:preserve-3d;
+}
+.env-body{position:absolute; inset:0; background:linear-gradient(160deg,var(--blush-soft),var(--blush)); box-shadow:var(--shadow-lift)}
+.env-flap{
+  position:absolute; left:0; right:0; top:0; height:58%;
+  background:linear-gradient(175deg,var(--blush),var(--rose));
+  clip-path:polygon(0 0,100% 0,50% 100%);
+  transform-origin:top center; transform:rotateX(0deg); z-index:4;
+  transition:transform .85s cubic-bezier(.6,.02,.2,1), z-index 0s .42s;
+  backface-visibility:hidden;
+}
+.envelope.open .env-flap{transform:rotateX(-172deg); z-index:0}
+.env-front{
+  position:absolute; inset:0; z-index:3; pointer-events:none;
+  background:linear-gradient(200deg,var(--blush-soft),var(--blush));
+  clip-path:polygon(0 8%,50% 62%,100% 8%,100% 100%,0 100%);
+}
+.seal{
+  position:absolute; left:50%; top:52%; translate:-50% -50%; z-index:5;
+  width:76px;height:76px;border-radius:50%;
+  background:radial-gradient(circle at 34% 30%, #92364a, var(--burgundy));
+  color:#F6DDE1; display:grid; place-items:center;
+  font-family:var(--serif); font-size:1.5rem; letter-spacing:.02em;
+  box-shadow:0 10px 22px -10px rgba(110,34,51,.7);
+  transition:opacity .35s, transform .5s;
+}
+.envelope.open .seal{opacity:0; transform:translate(-50%,-50%) scale(.6)}
+.env-hint{
+  position:absolute; left:50%; translate:-50% 0; bottom:-38px; z-index:6;
+  font-size:.68rem; letter-spacing:.3em; color:var(--ink-soft); white-space:nowrap;
+  transition:opacity .4s;
+}
+.envelope.open .env-hint{opacity:0}
+.env-card{
+  position:absolute; left:6%; right:6%; bottom:6%; z-index:2;
+  background:var(--card); border:1px solid var(--line);
+  padding:clamp(20px,3.6vw,40px) clamp(16px,3vw,34px); text-align:center;
+  transform:translateY(6%) scale(.96); opacity:0;
+  transition:transform .9s cubic-bezier(.2,.9,.25,1) .25s, opacity .5s .25s;
+  box-shadow:0 -10px 30px -18px rgba(110,34,51,.5);
+}
+.envelope.open .env-card{transform:translateY(-46%) scale(1); opacity:1}
+.env-card .script{display:block}
+.env-card .display-sm{font-family:var(--serif); font-size:clamp(1.5rem,4vw,2.6rem); color:var(--burgundy); line-height:1.1; margin:.2em 0}
+.env-card .fine{font-size:.66rem; letter-spacing:.24em}
+.invite-body{max-width:640px; margin:clamp(70px,10vw,120px) auto 0; text-align:center; opacity:0; transform:translateY(24px); transition:opacity .9s .15s, transform .9s cubic-bezier(.22,.7,.28,1) .15s}
+.invite-body.show{opacity:1; transform:none}
+
+/* ============================================================
+   GALLERY
+   ============================================================ */
+.collage{position:relative; display:grid; gap:clamp(20px,3vw,34px)}
+@media(min-width:880px){
+  .collage{grid-template-columns:repeat(12,1fr); grid-auto-rows:14px; gap:0}
+  .frame{position:relative}
+  .f1{grid-column:1/5;  grid-row:1/span 20}
+  .f2{grid-column:5/9;  grid-row:5/span 18; z-index:3}
+  .f3{grid-column:9/13; grid-row:1/span 17}
+  .f4{grid-column:2/6;  grid-row:22/span 19; z-index:2}
+  .f5{grid-column:6/10; grid-row:26/span 16}
+  .f6{grid-column:9/13; grid-row:20/span 20; z-index:3}
+}
+.frame{ padding:0 clamp(0px,1.4vw,18px) }
+.photo{
+  position:relative; background:var(--card); padding:12px 12px 46px;
+  border:1px solid rgba(110,34,51,.1); box-shadow:var(--shadow-soft);
+  transition:transform .6s cubic-bezier(.22,.7,.28,1), box-shadow .6s;
+  will-change:transform;
+}
+.photo img{width:100%; aspect-ratio:4/5; object-fit:cover; background:var(--blush-soft)}
+.photo figcaption{
+  position:absolute; left:0; right:0; bottom:14px; text-align:center;
+  font-family:var(--script); color:var(--rose); font-size:1.15rem;
+}
+.photo::after{ /* tape */
+  content:""; position:absolute; top:-11px; left:22%; width:76px; height:24px;
+  background:rgba(250,227,229,.85); box-shadow:0 2px 5px rgba(110,34,51,.12);
+  clip-path:polygon(5% 14%,98% 0,100% 82%,0 100%); transform:rotate(-6deg);
+}
+.frame:nth-child(even) .photo::after{left:auto; right:18%; transform:rotate(7deg)}
+.frame:nth-child(3n) .photo{padding-bottom:14px}
+.frame:nth-child(3n) figcaption{display:none}
+.photo:hover{transform:translateY(-8px) rotate(0deg) scale(1.015); box-shadow:var(--shadow-lift)}
+.f1 .photo{transform:rotate(-3deg)} .f2 .photo{transform:rotate(2deg)}
+.f3 .photo{transform:rotate(4deg)} .f4 .photo{transform:rotate(-2deg)}
+.f5 .photo{transform:rotate(3deg)} .f6 .photo{transform:rotate(-4deg)}
+.sticker{position:absolute; pointer-events:none; z-index:5; filter:drop-shadow(0 6px 10px rgba(110,34,51,.18))}
+.note{
+  position:absolute; z-index:6; background:var(--blush-soft); color:var(--burgundy);
+  font-family:var(--script); font-size:1.25rem; line-height:1.25; padding:14px 18px;
+  transform:rotate(-4deg); box-shadow:var(--shadow-soft); max-width:180px; text-align:center;
+}
+@media(max-width:879px){
+  .sticker.hide-sm,.note.hide-sm{display:none}
+  .collage .frame{padding:0}
+  .photo{transform:none !important}
+}
+
+/* ============================================================
+   EVENT + MAP
+   ============================================================ */
+.event{display:grid; gap:clamp(28px,4vw,56px)}
+@media(min-width:960px){ .event{grid-template-columns:1fr 1fr; align-items:stretch} }
+.event-key{border-top:1px solid var(--line); padding-top:26px}
+.event-key .k{font-size:.68rem; letter-spacing:.3em; color:var(--rose)}
+.event-key .v{font-family:var(--serif); font-size:clamp(1.8rem,4vw,3rem); line-height:1.12; color:var(--burgundy); margin:.15em 0 0}
+.event-key .v small{display:block; font-family:var(--sans); font-size:.9rem; letter-spacing:.1em; color:var(--ink-soft); margin-top:10px}
+.map-card{
+  position:relative; overflow:hidden; border:1px solid var(--line);
+  background:var(--card); box-shadow:var(--shadow-soft); min-height:340px; display:flex; flex-direction:column;
+}
+.map-art{position:relative; flex:1; min-height:240px; overflow:hidden}
+.map-art svg{position:absolute; inset:0; width:100%; height:100%}
+.pin{position:absolute; left:52%; top:46%; translate:-50% -100%; z-index:3}
+.pin .ring{position:absolute; left:50%; top:100%; translate:-50% -50%; width:22px;height:22px;border-radius:50%;
+  border:1.5px solid var(--rose); animation:ping 2.6s ease-out infinite}
+@keyframes ping{0%{transform:translate(-50%,-50%) scale(.4); opacity:.9}100%{transform:translate(-50%,-50%) scale(3.4); opacity:0}}
+.map-foot{padding:clamp(16px,2.4vw,26px); display:flex; flex-wrap:wrap; gap:14px; align-items:center; justify-content:space-between; border-top:1px solid var(--line)}
+.btn{
+  position:relative; overflow:hidden; cursor:pointer; background:var(--burgundy); color:#FDF3F1;
+  border:1px solid var(--burgundy); padding:14px 26px; font-size:.74rem; letter-spacing:.22em;
+  text-decoration:none; display:inline-flex; align-items:center; gap:10px; transition:color .4s, transform .3s;
+}
+.btn span{position:relative; z-index:2}
+.btn::before{content:""; position:absolute; inset:0; background:var(--blush); transform:translateY(101%); transition:transform .45s cubic-bezier(.3,.9,.3,1); z-index:1}
+.btn:hover{color:var(--burgundy); transform:translateY(-2px)}
+.btn:hover::before{transform:translateY(0)}
+.btn--ghost{background:transparent; color:var(--burgundy)}
+.btn--ghost::before{background:var(--blush-soft)}
+
+/* ============================================================
+   RSVP
+   ============================================================ */
+.rsvp{text-align:center; max-width:760px; margin-inline:auto}
+.rsvp-actions{display:flex; flex-wrap:wrap; gap:14px; justify-content:center; margin-top:clamp(26px,4vw,44px)}
+.rsvp-form{margin-top:34px; display:none; text-align:left}
+.rsvp-form.show{display:block; animation:softin .6s ease both}
+@keyframes softin{from{opacity:0; transform:translateY(14px)}to{opacity:1; transform:none}}
+.field{margin-bottom:18px}
+.field label{display:block; font-size:.66rem; letter-spacing:.26em; color:var(--rose); margin-bottom:8px}
+.field input, .field select, .field textarea{
+  width:100%; background:transparent; border:0; border-bottom:1px solid var(--line);
+  padding:10px 2px; font-family:var(--serif); font-size:1.2rem; color:var(--ink);
+}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none; border-bottom-color:var(--rose)}
+.field select{font-family:var(--sans); font-size:1rem}
+.confirm{display:none; margin-top:30px}
+.confirm.show{display:block}
+.stamp{
+  width:132px;height:132px;margin:0 auto 22px; border-radius:50%;
+  border:1px dashed var(--rose); color:var(--burgundy); display:grid; place-items:center; text-align:center;
+  font-size:.62rem; letter-spacing:.2em; line-height:1.9;
+  animation:stampin .7s cubic-bezier(.2,1.4,.4,1) both;
+}
+@keyframes stampin{0%{transform:scale(1.5) rotate(-12deg); opacity:0}100%{transform:scale(1) rotate(-6deg); opacity:1}}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+footer{padding:clamp(70px,10vw,120px) 0 calc(110px + env(safe-area-inset-bottom,0px)); text-align:center}
+footer .sig{font-family:var(--script); font-size:clamp(2.2rem,6vw,3.4rem); color:var(--burgundy)}
+
+/* floating decor that parallaxes */
+.decor{position:absolute; pointer-events:none; z-index:1; opacity:.9; will-change:transform}
+@media(max-width:700px){ .decor.hide-sm{display:none} }
+</style>
+</head>
+<body>
+
+<div id="progress"></div>
+<div id="cursor"></div><div id="cursor-dot"></div>
+
+<button id="music" aria-pressed="false" aria-label="Play background music">
+  <span class="label">Play music</span>
+  <span class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+</button>
+
+<!-- ══════════════ HERO ══════════════ -->
+<header class="hero" id="top">
+  <div class="petals" id="petals" aria-hidden="true"></div>
+
+  <svg class="decor hide-sm" data-speed="-.12" style="left:6%;top:16%;width:110px" viewBox="0 0 100 100" aria-hidden="true">
+    <g fill="none" stroke="#CE8D96" stroke-width="1.4">
+      <path d="M50 92V44"/><path d="M50 62c-16 2-26-8-26-22 15-2 26 8 26 22Z" fill="rgba(242,203,209,.45)"/>
+      <path d="M50 52c14-4 24 6 24 20-15 2-24-6-24-20Z" fill="rgba(169,184,156,.35)"/>
+    </g>
+    <circle cx="50" cy="26" r="13" fill="rgba(242,203,209,.7)"/><circle cx="50" cy="26" r="5" fill="#C9A227" opacity=".6"/>
+  </svg>
+
+  <svg class="decor hide-sm" data-speed=".18" style="right:9%;bottom:18%;width:92px" viewBox="0 0 100 80" aria-hidden="true">
+    <path d="M50 44c-8-18-30-18-30-4 0 10 18 14 30 26 12-12 30-16 30-26 0-14-22-14-30 4Z" fill="rgba(206,141,150,.4)"/>
+  </svg>
+
+  <div class="hero-inner">
+    <p class="eyebrow r">CLASS OF 2026</p>
+
+    <div class="name r-s">
+      <svg class="hero-cap" viewBox="0 0 120 90" aria-hidden="true">
+        <path d="M60 6 6 30l54 24 54-24L60 6Z" fill="#6E2233"/>
+        <path d="M60 58 26 43v18c0 9 15 15 34 15s34-6 34-15V43L60 58Z" fill="#8A2F44"/>
+        <path d="M112 32v26" stroke="#C9A227" stroke-width="2.4" fill="none"/>
+        <circle cx="112" cy="60" r="5" fill="#C9A227"/>
+        <path d="M112 62c-3 8-1 14 3 18" stroke="#C9A227" stroke-width="2" fill="none"/>
+      </svg>
+      <h1 class="display">Yusra<em>Issam</em></h1>
+    </div>
+
+    <div class="hero-sub r">
+      <span>THE HASHEMITE UNIVERSITY</span>
+      <span class="dot" aria-hidden="true"></span>
+      <span>WATER &amp; ENVIRONMENTAL MANAGEMENT</span>
+      <span class="dot" aria-hidden="true"></span>
+      <span>GRADUATION 2026</span>
+    </div>
+
+    <span class="script r">A new chapter begins…</span>
+  </div>
+
+  <div class="scroll-cue" aria-hidden="true">
+    <span class="rail"></span>
+    SCROLL TO DISCOVER
+  </div>
+</header>
+
+<!-- ══════════════ STORY ══════════════ -->
+<section class="band" aria-labelledby="story-h">
+  <div class="wrap story">
+    <div class="story-lines">
+      <h2 id="story-h" class="title r" style="color:var(--rose); font-size:clamp(1rem,1.4vw,1.05rem); letter-spacing:.34em; font-family:var(--sans); margin-bottom:clamp(26px,4vw,44px)">THE STORY SO FAR</h2>
+      <p class="r">Five years of early lectures, late labs,</p>
+      <p class="r">field notes written beside a river,</p>
+      <p class="r">and friendships made over shared deadlines.</p>
+      <p class="r">Now the last page turns.</p>
+      <svg class="decor hide-sm" data-speed="-.09" style="left:-40px;bottom:-30px;width:120px" viewBox="0 0 100 60" aria-hidden="true">
+        <path d="M50 30c-10-14-26-10-26 2 0 8 14 12 26 22 12-10 26-14 26-22 0-12-16-16-26-2Z" fill="none" stroke="rgba(206,141,150,.6)" stroke-width="1.4"/>
+      </svg>
+    </div>
+
+    <dl class="id-card r-s">
+      <div class="id-row"><dt>GRADUATE</dt><dd>Yusra Issam</dd></div>
+      <div class="id-row"><dt>DEGREE</dt><dd>Water &amp; Environmental<br>Management</dd></div>
+      <div class="id-row"><dt>UNIVERSITY</dt><dd>The Hashemite University</dd></div>
+      <div class="id-row"><dt>CLASS</dt><dd>2026</dd></div>
+      <p class="script" style="text-align:right; margin:22px 0 0">with every honour earned</p>
+    </dl>
+  </div>
+</section>
+
+<!-- ══════════════ COUNTDOWN ══════════════ -->
+<svg class="torn" viewBox="0 0 1200 40" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40h1200V14c-42 9-71-6-113-2-38 4-57 16-95 12-44-5-62-19-106-15-40 3-59 15-99 14-42-1-63-14-105-14-45 0-67 15-112 14-39-1-57-13-96-14-43-1-64 13-107 11C126 19 108 6 66 8 44 9 22 14 0 20Z"/></svg>
+<section class="band band--tint" aria-labelledby="count-h">
+  <div class="wrap">
+    <div class="count-head">
+      <h2 id="count-h" class="title r">Counting down</h2>
+      <p class="script r" id="count-sub">to the walk across the stage</p>
+    </div>
+    <div class="counter r-s" id="counter" role="timer" aria-live="off">
+      <div class="unit"><span class="num" id="cd-d">00</span><span class="lab">DAYS</span></div>
+      <div class="unit"><span class="num" id="cd-h">00</span><span class="lab">HOURS</span></div>
+      <div class="unit"><span class="num" id="cd-m">00</span><span class="lab">MINUTES</span></div>
+      <div class="unit"><span class="num" id="cd-s">00</span><span class="lab">SECONDS</span></div>
+    </div>
+    <p class="today" id="today" hidden>Today is the day ✨</p>
+  </div>
+</section>
+<svg class="torn flip" viewBox="0 0 1200 40" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40h1200V14c-42 9-71-6-113-2-38 4-57 16-95 12-44-5-62-19-106-15-40 3-59 15-99 14-42-1-63-14-105-14-45 0-67 15-112 14-39-1-57-13-96-14-43-1-64 13-107 11C126 19 108 6 66 8 44 9 22 14 0 20Z"/></svg>
+
+<!-- ══════════════ ENVELOPE ══════════════ -->
+<section class="band" aria-labelledby="invite-h">
+  <div class="wrap">
+    <h2 id="invite-h" class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">The invitation</h2>
+    <div class="envelope-stage">
+      <div class="envelope r-s" id="envelope" role="button" tabindex="0" aria-expanded="false" aria-label="Open the invitation">
+        <div class="env-body"></div>
+        <div class="env-card">
+          <span class="script">You're invited</span>
+          <span class="display-sm">to celebrate Yusra's<br>graduation</span>
+          <span class="fine">THE HASHEMITE UNIVERSITY · CLASS OF 2026</span>
+        </div>
+        <div class="env-front"></div>
+        <div class="env-flap"></div>
+        <div class="seal" aria-hidden="true">Y</div>
+        <span class="env-hint">TAP TO OPEN</span>
+      </div>
+    </div>
+
+    <div class="invite-body" id="inviteBody">
+      <p class="lede">After five years of learning, growing and collecting memories, Yusra is closing one chapter and opening the next — and it wouldn't feel finished without the people who made it possible.</p>
+      <p class="script" style="font-size:clamp(1.7rem,4vw,2.6rem)">Come stand with her on the last day.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ GALLERY ══════════════ -->
+<section class="band" aria-labelledby="gal-h" id="gallery">
+  <div class="wrap">
+    <div style="max-width:520px; margin-bottom:clamp(36px,6vw,70px)">
+      <h2 id="gal-h" class="title r">Five years,<br>kept in pieces</h2>
+      <p class="lede r" style="margin-top:18px">Cuttings from the album — fieldwork mornings, lab afternoons, and the friends who turned up for all of it.</p>
+    </div>
+
+    <div class="collage" id="collage">
+      <figure class="frame f1 r"><div class="photo"><img data-photo="0" alt="Graduation memory" loading="lazy" decoding="async"><figcaption>first day, 2021</figcaption></div></figure>
+      <figure class="frame f2 r"><div class="photo"><img data-photo="1" alt="Fieldwork by the river" loading="lazy" decoding="async"><figcaption>river sampling</figcaption></div></figure>
+      <figure class="frame f3 r"><div class="photo"><img data-photo="2" alt="Campus courtyard" loading="lazy" decoding="async"><figcaption>the long walk</figcaption></div></figure>
+      <figure class="frame f4 r"><div class="photo"><img data-photo="3" alt="Study nights" loading="lazy" decoding="async"><figcaption>3am, again</figcaption></div></figure>
+      <figure class="frame f5 r"><div class="photo"><img data-photo="4" alt="Friends celebrating" loading="lazy" decoding="async"><figcaption>the whole crew</figcaption></div></figure>
+      <figure class="frame f6 r"><div class="photo"><img data-photo="5" alt="Cap toss" loading="lazy" decoding="async"><figcaption>caps up</figcaption></div></figure>
+
+      <div class="note hide-sm" style="left:44%; top:6%">we made it,<br>habibti ♡</div>
+      <svg class="sticker hide-sm" style="right:2%; top:44%; width:74px" viewBox="0 0 100 100" aria-hidden="true">
+        <path d="M50 40C36 18 8 26 8 46c0 16 26 22 42 42 16-20 42-26 42-42 0-20-28-28-42-6Z" fill="#F2CBD1" stroke="#CE8D96" stroke-width="2"/>
+      </svg>
+      <svg class="sticker hide-sm" style="left:1%; bottom:8%; width:92px" viewBox="0 0 120 80" aria-hidden="true">
+        <path d="M60 40c-6-16-26-22-34-12-7 9 6 18 22 20-14 6-22 18-14 26 9 8 21-6 26-22 5 16 17 30 26 22 8-8 0-20-14-26 16-2 29-11 22-20-8-10-28-4-34 12Z" fill="#FAE3E5" stroke="#CE8D96" stroke-width="1.6"/>
+        <circle cx="60" cy="40" r="7" fill="#CE8D96"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ EVENT + MAP ══════════════ -->
+<svg class="torn" viewBox="0 0 1200 40" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40h1200V16c-48 6-70 14-118 10-42-3-60-16-102-14-46 2-66 18-112 16-40-2-58-14-98-15-44-1-66 14-110 12-40-2-58-14-98-13-45 1-67 16-112 13C104 23 86 10 44 12 29 13 15 16 0 20Z"/></svg>
+<section class="band band--tint" aria-labelledby="ev-h">
+  <div class="wrap event">
+    <div>
+      <h2 id="ev-h" class="title r">Graduation<br>ceremony</h2>
+      <p class="script r" style="margin-top:10px">and the celebration after</p>
+
+      <div class="event-key r" style="margin-top:clamp(30px,5vw,54px)">
+        <span class="k">DATE</span>
+        <p class="v" id="ev-date">Thursday, 18 June 2026<small id="ev-time">Doors open 5:00 pm · Ceremony begins 5:30 pm</small></p>
+      </div>
+      <div class="event-key r" style="margin-top:34px">
+        <span class="k">PLACE</span>
+        <p class="v" id="ev-place">Al-Yarmouk Amphitheatre<small id="ev-place-sub">The Hashemite University · Zarqa, Jordan</small></p>
+      </div>
+      <div class="event-key r" style="margin-top:34px">
+        <span class="k">DRESS</span>
+        <p class="v" style="font-size:clamp(1.3rem,2.4vw,1.8rem)">Soft summer formal<small>Blush, cream and rose are very welcome.</small></p>
+      </div>
+    </div>
+
+    <div class="map-card r-s">
+      <div class="map-art">
+        <svg viewBox="0 0 600 420" preserveAspectRatio="xMidYMid slice" aria-label="Stylised map of the ceremony location">
+          <rect width="600" height="420" fill="#FAE3E5"/>
+          <g stroke="#F2CBD1" stroke-width="16" fill="none">
+            <path d="M-20 300 H620"/><path d="M-20 120 H620"/><path d="M180 -20 V440"/><path d="M420 -20 V440"/>
+          </g>
+          <g fill="#FFFBF8" opacity=".85">
+            <rect x="200" y="140" width="90" height="70" rx="2"/><rect x="310" y="140" width="80" height="50" rx="2"/>
+            <rect x="60" y="150" width="90" height="120" rx="2"/><rect x="450" y="200" width="110" height="80" rx="2"/>
+            <rect x="200" y="320" width="120" height="70" rx="2"/>
+          </g>
+          <g fill="#A9B89C" opacity=".55">
+            <circle cx="120" cy="330" r="34"/><circle cx="160" cy="352" r="22"/><circle cx="500" cy="90" r="40"/><circle cx="455" cy="110" r="24"/>
+          </g>
+          <path d="M-20 240 C120 210 200 268 320 246 C440 224 520 268 620 244" stroke="#CE8D96" stroke-width="3" fill="none" stroke-dasharray="8 9" opacity=".8"/>
+          <rect x="250" y="160" width="120" height="90" fill="none" stroke="#CE8D96" stroke-width="2" opacity=".5"/>
+        </svg>
+        <div class="pin">
+          <span class="ring" aria-hidden="true"></span>
+          <svg width="34" height="46" viewBox="0 0 34 46" aria-hidden="true">
+            <path d="M17 0C7.6 0 0 7.5 0 16.8 0 29.4 17 46 17 46s17-16.6 17-29.2C34 7.5 26.4 0 17 0Z" fill="#6E2233"/>
+            <circle cx="17" cy="16.5" r="6.2" fill="#FAE3E5"/>
+          </svg>
+        </div>
+      </div>
+      <div class="map-foot">
+        <div>
+          <p class="fine" style="margin:0 0 4px; letter-spacing:.22em">FIND US HERE</p>
+          <p style="margin:0; font-family:var(--serif); font-size:1.15rem" id="map-name">Al-Yarmouk Amphitheatre</p>
+        </div>
+        <a class="btn" id="mapBtn" href="#" target="_blank" rel="noopener"><span>VIEW LOCATION</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+<svg class="torn flip" viewBox="0 0 1200 40" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40h1200V16c-48 6-70 14-118 10-42-3-60-16-102-14-46 2-66 18-112 16-40-2-58-14-98-15-44-1-66 14-110 12-40-2-58-14-98-13-45 1-67 16-112 13C104 23 86 10 44 12 29 13 15 16 0 20Z"/></svg>
+
+<!-- ══════════════ RSVP ══════════════ -->
+<section class="band" aria-labelledby="rsvp-h" id="rsvp">
+  <div class="wrap rsvp">
+    <svg class="decor hide-sm" data-speed=".14" style="left:8%; top:10%; width:86px" viewBox="0 0 100 70" aria-hidden="true">
+      <path d="M50 34 34 14c-10-12-28 0-20 14 5 9 22 12 36 6Z" fill="rgba(242,203,209,.75)" stroke="#CE8D96" stroke-width="1.5"/>
+      <path d="M50 34 66 14c10-12 28 0 20 14-5 9-22 12-36 6Z" fill="rgba(242,203,209,.75)" stroke="#CE8D96" stroke-width="1.5"/>
+      <circle cx="50" cy="35" r="8" fill="#CE8D96"/>
+      <path d="M44 42 32 66M56 42 68 66" stroke="#CE8D96" stroke-width="1.5" fill="none"/>
+    </svg>
+
+    <h2 id="rsvp-h" class="title r">Will you celebrate<br>with me?</h2>
+    <p class="lede r" style="margin:18px auto 0">Seats are limited to two guests per invitation. Please reply by 1 June 2026 so Yusra knows to look for you.</p>
+
+    <div class="rsvp-actions r">
+      <button class="btn" data-answer="yes"><span>YES, I'LL BE THERE</span></button>
+      <button class="btn btn--ghost" data-answer="maybe"><span>I'LL LET YOU KNOW</span></button>
+    </div>
+
+    <div class="rsvp-form" id="rsvpForm">
+      <div class="field">
+        <label for="rsvp-name">YOUR NAME</label>
+        <input id="rsvp-name" name="name" type="text" autocomplete="name" placeholder="Who should we expect?">
+      </div>
+      <div class="field" id="guestField">
+        <label for="rsvp-guests">GUESTS, INCLUDING YOU</label>
+        <select id="rsvp-guests" name="guests"><option>1</option><option>2</option></select>
+      </div>
+      <div class="field">
+        <label for="rsvp-note">A NOTE FOR YUSRA</label>
+        <input id="rsvp-note" name="note" type="text" placeholder="Optional">
+      </div>
+      <div style="text-align:center; margin-top:28px">
+        <button class="btn" id="rsvpSend"><span>SEND REPLY</span></button>
+      </div>
+    </div>
+
+    <div class="confirm" id="confirm" role="status">
+      <div class="stamp" id="stamp">REPLY<br>RECEIVED<br>18·06·26</div>
+      <p class="script" style="font-size:clamp(1.8rem,4.5vw,2.8rem)" id="confirmMsg">See you there ♡</p>
+      <p class="fine" id="confirmSub">Yusra will be told straight away.</p>
+      <button class="btn btn--ghost" id="editReply" style="margin-top:10px"><span>CHANGE MY REPLY</span></button>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ FOOTER ══════════════ -->
+<footer>
+  <div class="wrap">
+    <svg width="54" height="54" viewBox="0 0 120 90" style="margin:0 auto 24px" aria-hidden="true">
+      <path d="M60 6 6 30l54 24 54-24L60 6Z" fill="#CE8D96"/>
+      <path d="M60 58 26 43v18c0 9 15 15 34 15s34-6 34-15V43L60 58Z" fill="#F2CBD1"/>
+    </svg>
+    <p class="fine" style="letter-spacing:.3em; margin-bottom:14px">WITH LOVE AND ALL THE GRATITUDE</p>
+    <p class="sig">Yusra</p>
+    <p class="fine" style="margin-top:30px; opacity:.7">A demo invitation · Fictional event details</p>
+  </div>
+</footer>
+
+<script>
+/* ============================================================
+   1 · CONFIG — everything a customer edits lives here
+   ============================================================ */
+const CONFIG = {
+  graduateName:   "Yusra Issam",
+  university:     "The Hashemite University",
+  major:          "Water and Environmental Management",
+  graduationYear: "2026",
+
+  // ISO 8601 with offset. Jordan is UTC+03:00.
+  eventDate:      "2026-06-18T17:30:00+03:00",
+  eventDateLabel: "Thursday, 18 June 2026",
+  eventTimeLabel: "Doors open 5:00 pm · Ceremony begins 5:30 pm",
+
+  locationName:   "Al-Yarmouk Amphitheatre",
+  locationDetail: "The Hashemite University · Zarqa, Jordan",
+  mapsUrl:        "https://www.google.com/maps/search/?api=1&query=The+Hashemite+University+Zarqa+Jordan",
+
+  musicUrl:       "",           // drop in an .mp3 URL; empty = built-in ambient tones
+  rsvpEndpoint:   "",           // e.g. "https://your-api.com/rsvp" (POST JSON)
+  rsvpDeadline:   "1 June 2026"
+};
+
+/* ============================================================
+   2 · UTIL
+   ============================================================ */
+const $  = (s, r=document) => r.querySelector(s);
+const $$ = (s, r=document) => [...r.querySelectorAll(s)];
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+/* ============================================================
+   3 · CONTENT BINDING
+   ============================================================ */
+(function bind(){
+  $("#ev-date").firstChild.nodeValue = CONFIG.eventDateLabel;
+  $("#ev-time").textContent          = CONFIG.eventTimeLabel;
+  $("#ev-place").firstChild.nodeValue= CONFIG.locationName;
+  $("#ev-place-sub").textContent     = CONFIG.locationDetail;
+  $("#map-name").textContent         = CONFIG.locationName;
+  $("#mapBtn").href                  = CONFIG.mapsUrl;
+  document.title = CONFIG.graduateName + " · Graduation " + CONFIG.graduationYear;
+})();
+
+/* ============================================================
+   4 · SCROLL REVEALS
+   ============================================================ */
+const io = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(!e.isIntersecting) return;
+    const el = e.target;
+    const sibs = [...(el.parentElement?.children||[])].filter(n=>n.classList.contains("r")||n.classList.contains("r-s")||n.classList.contains("r-l"));
+    const i = Math.max(0, sibs.indexOf(el));
+    el.style.transitionDelay = Math.min(i*90, 520) + "ms";
+    el.classList.add("in");
+    io.unobserve(el);
+  });
+},{rootMargin:"0px 0px -12% 0px", threshold:.15});
+$$(".r, .r-s, .r-l").forEach(el=>io.observe(el));
+
+/* ============================================================
+   5 · SCROLL PROGRESS + PARALLAX  (one rAF loop)
+   ============================================================ */
+const bar    = $("#progress");
+const decor  = $$(".decor");
+const heroCap= $(".hero-cap");
+let ticking = false, lastY = 0;
+
+function onScroll(){
+  lastY = window.scrollY;
+  if(ticking) return;
+  ticking = true;
+  requestAnimationFrame(()=>{
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.transform = "scaleX(" + (max>0 ? lastY/max : 0) + ")";
+    if(!reduceMotion){
+      decor.forEach(d=>{
+        const sp = parseFloat(d.dataset.speed || ".1");
+        const rect = d.getBoundingClientRect();
+        if(rect.bottom > -200 && rect.top < innerHeight + 200){
+          d.style.transform = "translate3d(0," + ((rect.top - innerHeight/2) * sp * .35).toFixed(2) + "px,0)";
+        }
+      });
+      if(heroCap && lastY < innerHeight*1.2){
+        heroCap.style.marginTop = (lastY * .08).toFixed(1) + "px";
+      }
+    }
+    ticking = false;
+  });
+}
+addEventListener("scroll", onScroll, {passive:true});
+onScroll();
+
+/* ============================================================
+   6 · HERO PETAL / STAR DRIFT
+   ============================================================ */
+(function petals(){
+  if(reduceMotion) return;
+  const host = $("#petals");
+  const n = innerWidth < 700 ? 10 : 18;
+  const shapes = [
+    '<path d="M10 2c5 4 6 10 0 16C4 12 5 6 10 2Z" fill="%23F2CBD1"/>',
+    '<path d="M10 2c5 4 6 10 0 16C4 12 5 6 10 2Z" fill="%23FAE3E5"/>',
+    '<path d="M10 0l2.4 6.6L19 9l-6.6 2.4L10 18l-2.4-6.6L1 9l6.6-2.4z" fill="%23C9A227" opacity=".55"/>',
+    '<path d="M10 16c-4-5-9-6-9-10 0-3 4-5 6-2 1 1 2 3 3 5 1-2 2-4 3-5 2-3 6-1 6 2 0 4-5 5-9 10Z" fill="%23CE8D96" opacity=".6"/>'
+  ];
+  let html = "";
+  for(let i=0;i<n;i++){
+    const s = shapes[i % shapes.length];
+    const size = 8 + Math.random()*14;
+    html += '<span class="petal" style="'
+      + 'left:' + (Math.random()*100).toFixed(1) + '%;'
+      + 'width:' + size.toFixed(0) + 'px;'
+      + '--dx:' + (Math.random()*160-80).toFixed(0) + 'px;'
+      + '--rot:' + (Math.random()*540-180).toFixed(0) + 'deg;'
+      + 'animation-duration:' + (14+Math.random()*16).toFixed(1) + 's;'
+      + 'animation-delay:-' + (Math.random()*22).toFixed(1) + 's;">'
+      + '<svg viewBox="0 0 20 20" width="100%">' + s.replace(/%23/g,"#") + '</svg></span>';
+  }
+  host.innerHTML = html;
+})();
+
+/* ============================================================
+   7 · COUNTDOWN
+   ============================================================ */
+(function countdown(){
+  const target = new Date(CONFIG.eventDate).getTime();
+  const els = {d:$("#cd-d"), h:$("#cd-h"), m:$("#cd-m"), s:$("#cd-s")};
+  const units = $$(".unit");
+  const pad = v => String(v).padStart(2,"0");
+  let prev = {};
+
+  function frame(){
+    const diff = target - Date.now();
+    if(diff <= 0){
+      $("#counter").hidden = true;
+      $("#count-sub").hidden = true;
+      $("#today").hidden = false;
+      return;
+    }
+    const s = Math.floor(diff/1000);
+    const v = { d: Math.floor(s/86400), h: Math.floor(s%86400/3600), m: Math.floor(s%3600/60), s: s%60 };
+    Object.keys(v).forEach((k,i)=>{
+      if(prev[k] === v[k]) return;
+      prev[k] = v[k];
+      els[k].textContent = pad(v[k]);
+      const u = units[i];
+      u.classList.add("tick");
+      setTimeout(()=>u.classList.remove("tick"), 320);
+    });
+    setTimeout(frame, 1000 - (Date.now() % 1000));
+  }
+  frame();
+})();
+
+/* ============================================================
+   8 · ENVELOPE
+   ============================================================ */
+(function envelope(){
+  const env  = $("#envelope");
+  const body = $("#inviteBody");
+  let opened = false;
+
+  function open(){
+    if(opened) return;
+    opened = true;
+    env.classList.add("open");
+    env.setAttribute("aria-expanded","true");
+    setTimeout(()=>body.classList.add("show"), 520);
+    burst(env, 16);
+  }
+  env.addEventListener("click", open);
+  env.addEventListener("keydown", e=>{ if(e.key==="Enter"||e.key===" "){ e.preventDefault(); open(); }});
+
+  // auto-open once it has been comfortably in view for a moment
+  const auto = new IntersectionObserver(es=>{
+    es.forEach(e=>{ if(e.isIntersecting){ setTimeout(open, 900); auto.disconnect(); }});
+  },{threshold:.6});
+  auto.observe(env);
+})();
+
+/* ============================================================
+   9 · PARTICLE BURST (hearts + stars)
+   ============================================================ */
+function burst(anchor, count=12){
+  if(reduceMotion) return;
+  const r = anchor.getBoundingClientRect();
+  const cx = r.left + r.width/2, cy = r.top + r.height/2;
+  for(let i=0;i<count;i++){
+    const p = document.createElement("span");
+    const heart = Math.random() > .45;
+    p.innerHTML = heart
+      ? '<svg viewBox="0 0 20 20" width="14"><path d="M10 17c-4-5-9-6-9-10 0-3 4-5 6-2 1 1 2 3 3 5 1-2 2-4 3-5 2-3 6-1 6 2 0 4-5 5-9 10Z" fill="#CE8D96"/></svg>'
+      : '<svg viewBox="0 0 20 20" width="12"><path d="M10 0l2.4 6.6L19 9l-6.6 2.4L10 18l-2.4-6.6L1 9l6.6-2.4z" fill="#C9A227"/></svg>';
+    p.style.cssText = "position:fixed;left:"+cx+"px;top:"+cy+"px;z-index:94;pointer-events:none;opacity:1;transition:transform 1.1s cubic-bezier(.2,.8,.3,1),opacity 1.1s ease";
+    document.body.appendChild(p);
+    requestAnimationFrame(()=>{
+      const a = Math.random()*Math.PI*2, d = 90 + Math.random()*170;
+      p.style.transform = "translate("+Math.cos(a)*d+"px,"+(Math.sin(a)*d - 60)+"px) rotate("+(Math.random()*360-180)+"deg)";
+      p.style.opacity = "0";
+    });
+    setTimeout(()=>p.remove(), 1200);
+  }
+}
+
+/* ============================================================
+   10 · GALLERY — locally drawn placeholder photographs
+        Replace: CONFIG.galleryImages = ["/photos/1.jpg", …]
+   ============================================================ */
+CONFIG.galleryImages = null; // set to an array of URLs to use real photos
+
+(function gallery(){
+  const palettes = [
+    ["#F7D8DC","#E8AFB8","#C98B94","#FBF4EF"],
+    ["#E4EBDD","#BFD0B4","#8FA37F","#FBF4EF"],
+    ["#FCE6DC","#F0BFA8","#CE8D96","#FBF4EF"],
+    ["#EFE0EC","#D9B6CE","#A8789B","#FBF4EF"],
+    ["#FBEBD4","#F0D3A0","#C9A227","#FBF4EF"],
+    ["#F4DDE2","#DDA9B4","#6E2233","#FBF4EF"]
+  ];
+
+  function scene(i,[c1,c2,c3,c4]){
+    const sun = '<circle cx="300" cy="150" r="78" fill="'+c2+'" opacity=".85"/>';
+    const hills = '<path d="M0 500V330c90-40 150 20 230-10s130-60 210-30 130 50 160 40V500Z" fill="'+c3+'" opacity=".75"/>';
+    const cap = (x,y,s,col)=>'<g transform="translate('+x+' '+y+') scale('+s+')"><path d="M0 0 -46 20 0 40 46 20Z" fill="'+col+'"/><path d="M0 44 -28 32v14c0 7 12 12 28 12s28-5 28-12V32L0 44Z" fill="'+col+'" opacity=".8"/></g>';
+    const figure = (x,sc,col)=>'<g transform="translate('+x+' 500) scale('+sc+')"><circle cx="0" cy="-196" r="34" fill="'+col+'"/><path d="M-44 0c0-70 12-140 44-140s44 70 44 140Z" fill="'+col+'"/></g>';
+    switch(i%6){
+      case 0: return sun+hills+figure(300,1,c3)+cap(300,232,1,c4);
+      case 1: return '<path d="M0 360c80-26 150 24 230 6s150-50 230-26 140 34 140 34V500H0Z" fill="'+c3+'" opacity=".6"/>'
+                   + '<path d="M0 420c110-20 180 28 300 10s190-30 300-14V500H0Z" fill="'+c2+'"/>'
+                   + figure(230,.8,c3) + '<circle cx="430" cy="130" r="54" fill="'+c2+'" opacity=".8"/>';
+      case 2: return '<g fill="'+c2+'" opacity=".9"><rect x="60" y="180" width="110" height="320"/><rect x="230" y="120" width="140" height="380"/><rect x="430" y="210" width="110" height="290"/></g>'
+                   + '<g fill="'+c3+'" opacity=".55"><rect x="90" y="220" width="50" height="60"/><rect x="270" y="170" width="60" height="70"/><rect x="460" y="250" width="50" height="60"/></g>'
+                   + '<circle cx="470" cy="110" r="46" fill="'+c2+'"/>';
+      case 3: return '<rect x="120" y="270" width="360" height="230" fill="'+c2+'"/>'
+                   + '<g fill="'+c3+'" opacity=".8"><rect x="160" y="180" width="120" height="90" rx="4"/><rect x="320" y="210" width="140" height="60" rx="4"/></g>'
+                   + '<circle cx="300" cy="120" r="40" fill="'+c2+'" opacity=".7"/>' + figure(300,.5,c3);
+      case 4: return sun + figure(180,.7,c3) + figure(300,.85,c3) + figure(420,.7,c3)
+                   + '<g fill="'+c4+'" opacity=".8">'+cap(180,300,.5,c4)+cap(300,250,.6,c4)+cap(420,300,.5,c4)+'</g>';
+      default:
+        let caps = "";
+        for(let k=0;k<7;k++){
+          caps += '<g transform="rotate('+(k*47%360-180)+' '+(80+k*70)+' '+(120+(k%3)*70)+')">'+cap(80+k*70,120+(k%3)*70,.55,c3)+'</g>';
+        }
+        return '<path d="M0 430c120-30 200 20 300 6s180-36 300-16V500H0Z" fill="'+c2+'"/>'+caps;
+    }
+  }
+
+  function makePhoto(i){
+    const p = palettes[i % palettes.length];
+    const svg =
+      '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500">'
+      + '<defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1">'
+      + '<stop offset="0" stop-color="'+p[3]+'"/><stop offset="1" stop-color="'+p[0]+'"/></linearGradient>'
+      + '<filter id="b"><feGaussianBlur stdDeviation="9"/></filter></defs>'
+      + '<rect width="600" height="500" fill="url(#g)"/>'
+      + '<g filter="url(#b)">' + scene(i,p) + '</g>'
+      + '<g opacity=".35" fill="'+p[1]+'"><circle cx="90" cy="90" r="30"/><circle cx="520" cy="410" r="44"/><circle cx="150" cy="430" r="20"/></g>'
+      + '<rect width="600" height="500" fill="'+p[2]+'" opacity=".06"/>'
+      + '</svg>';
+    return "data:image/svg+xml;charset=utf-8," + encodeURIComponent(svg);
+  }
+
+  // lazy: only build the image when the frame nears the viewport
+  const lazy = new IntersectionObserver(es=>{
+    es.forEach(e=>{
+      if(!e.isIntersecting) return;
+      const img = e.target;
+      const i = +img.dataset.photo;
+      img.src = (CONFIG.galleryImages && CONFIG.galleryImages[i]) || makePhoto(i);
+      lazy.unobserve(img);
+    });
+  },{rootMargin:"400px"});
+  $$("[data-photo]").forEach(img=>lazy.observe(img));
+})();
+
+/* ============================================================
+   11 · RSVP  (swap submitRSVP for a real endpoint later)
+   ============================================================ */
+(function rsvp(){
+  const form   = $("#rsvpForm");
+  const confirm= $("#confirm");
+  const actions= $(".rsvp-actions");
+  const msg    = $("#confirmMsg");
+  const sub    = $("#confirmSub");
+  let answer = null;
+
+  async function submitRSVP(payload){
+    // Persist locally so the guest sees their reply on return.
+    try{ localStorage.setItem("rsvp:"+location.pathname, JSON.stringify(payload)); }catch(e){}
+    if(CONFIG.rsvpEndpoint){
+      try{
+        await fetch(CONFIG.rsvpEndpoint,{
+          method:"POST",
+          headers:{"Content-Type":"application/json"},
+          body:JSON.stringify(payload)
+        });
+      }catch(err){ console.warn("RSVP endpoint unreachable, reply kept locally.", err); }
+    }
+    return payload;
+  }
+
+  function showConfirm(p){
+    form.classList.remove("show");
+    actions.style.display = "none";
+    confirm.classList.add("show");
+    const yes = p.attending === "yes";
+    msg.textContent = yes ? "See you there ♡" : "No rush — reply whenever you can.";
+    sub.textContent = yes
+      ? (p.name ? p.name + ", your seat is saved." : "Your seat is saved.")
+      : "A gentle reminder goes out before " + CONFIG.rsvpDeadline + ".";
+    $("#stamp").innerHTML = yes ? "REPLY<br>RECEIVED<br>18·06·26" : "REPLY<br>PENDING<br>· ·";
+    if(yes) burst(confirm, 20);
+  }
+
+  $$("[data-answer]").forEach(btn=>{
+    btn.addEventListener("click", ()=>{
+      answer = btn.dataset.answer;
+      form.classList.add("show");
+      $("#guestField").style.display = answer === "yes" ? "" : "none";
+      form.scrollIntoView({behavior: reduceMotion ? "auto" : "smooth", block:"center"});
+      setTimeout(()=>$("#rsvp-name").focus({preventScroll:true}), 400);
+    });
+  });
+
+  $("#rsvpSend").addEventListener("click", async ()=>{
+    const payload = {
+      name: $("#rsvp-name").value.trim(),
+      guests: answer === "yes" ? +$("#rsvp-guests").value : 0,
+      note: $("#rsvp-note").value.trim(),
+      attending: answer,
+      event: CONFIG.graduateName + " · " + CONFIG.graduationYear,
+      submittedAt: new Date().toISOString()
+    };
+    if(!payload.name){ $("#rsvp-name").focus(); return; }
+    await submitRSVP(payload);
+    showConfirm(payload);
+  });
+
+  $("#editReply").addEventListener("click", ()=>{
+    confirm.classList.remove("show");
+    actions.style.display = "";
+    form.classList.remove("show");
+  });
+
+  // restore a previous reply
+  try{
+    const saved = JSON.parse(localStorage.getItem("rsvp:"+location.pathname) || "null");
+    if(saved && saved.attending){
+      answer = saved.attending;
+      $("#rsvp-name").value = saved.name || "";
+      showConfirm(saved);
+    }
+  }catch(e){}
+})();
+
+/* ============================================================
+   12 · MUSIC — CONFIG.musicUrl, or a soft built-in ambience
+   ============================================================ */
+(function music(){
+  const btn = $("#music");
+  const label = $("#music .label");
+  let playing = false, audio = null, ctx = null, timer = null, master = null;
+
+  function startTones(){
+    ctx = ctx || new (window.AudioContext || window.webkitAudioContext)();
+    if(!master){
+      master = ctx.createGain();
+      master.gain.value = 0;
+      master.connect(ctx.destination);
+      master.gain.linearRampToValueAtTime(.18, ctx.currentTime + 1.6);
+    }
+    const notes = [392, 440, 523.25, 587.33, 659.25, 783.99];
+    let i = 0;
+    const play = ()=>{
+      const o = ctx.createOscillator(), g = ctx.createGain();
+      o.type = "sine";
+      o.frequency.value = notes[i % notes.length] * (i % 5 === 4 ? .5 : 1);
+      g.gain.setValueAtTime(0, ctx.currentTime);
+      g.gain.linearRampToValueAtTime(.5, ctx.currentTime + .6);
+      g.gain.exponentialRampToValueAtTime(.001, ctx.currentTime + 4.2);
+      o.connect(g); g.connect(master);
+      o.start(); o.stop(ctx.currentTime + 4.4);
+      i++;
+    };
+    play();
+    timer = setInterval(play, 2200);
+  }
+
+  function stopTones(){
+    clearInterval(timer); timer = null;
+    if(master && ctx) master.gain.linearRampToValueAtTime(0, ctx.currentTime + .6);
+    setTimeout(()=>{ if(!playing && master){ master.disconnect(); master = null; } }, 800);
+  }
+
+  btn.addEventListener("click", ()=>{
+    playing = !playing;
+    btn.classList.toggle("playing", playing);
+    btn.setAttribute("aria-pressed", String(playing));
+    btn.setAttribute("aria-label", playing ? "Pause background music" : "Play background music");
+    label.textContent = playing ? "Pause music" : "Play music";
+
+    if(CONFIG.musicUrl){
+      if(!audio){ audio = new Audio(CONFIG.musicUrl); audio.loop = true; audio.volume = .35; }
+      playing ? audio.play().catch(()=>{}) : audio.pause();
+    }else{
+      playing ? startTones() : stopTones();
+    }
+  });
+})();
+
+/* ============================================================
+   13 · DESKTOP CURSOR
+   ============================================================ */
+(function cursor(){
+  if(!matchMedia("(hover:hover) and (pointer:fine)").matches || reduceMotion) return;
+  const ring = $("#cursor"), dot = $("#cursor-dot");
+  let x=innerWidth/2, y=innerHeight/2, rx=x, ry=y;
+  addEventListener("pointermove", e=>{
+    x=e.clientX; y=e.clientY;
+    dot.style.transform = "translate("+(x-3)+"px,"+(y-3)+"px)";
+  }, {passive:true});
+  (function loop(){
+    rx += (x-rx)*.16; ry += (y-ry)*.16;
+    ring.style.transform = "translate("+(rx-17)+"px,"+(ry-17)+"px)";
+    requestAnimationFrame(loop);
+  })();
+  $$("a, button, .envelope, .photo").forEach(el=>{
+    el.addEventListener("pointerenter", ()=>document.body.classList.add("hovering"));
+    el.addEventListener("pointerleave", ()=>document.body.classList.remove("hovering"));
+  });
+})();
+</script>
+</body>
+</html>
